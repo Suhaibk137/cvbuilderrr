@@ -1,0 +1,44 @@
+{
+    "version": 2,
+    "name": "resume-pdf-export",
+    "functions": {
+      "api/export.js": {
+        "maxDuration": 30
+      }
+    },
+    "regions": ["iad1"],
+    "build": {
+      "env": {
+        "NODE_OPTIONS": "--max-old-space-size=3008"
+      }
+    },
+    "headers": [
+      {
+        "source": "/api/(.*)",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          },
+          {
+            "key": "Access-Control-Allow-Methods",
+            "value": "GET, POST, PUT, DELETE, OPTIONS"
+          },
+          {
+            "key": "Access-Control-Allow-Headers",
+            "value": "Content-Type, Authorization"
+          },
+          {
+            "key": "Access-Control-Max-Age",
+            "value": "86400"
+          }
+        ]
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "/export",
+        "destination": "/api/export"
+      }
+    ]
+  }

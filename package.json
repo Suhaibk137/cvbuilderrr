@@ -1,0 +1,32 @@
+{
+    "name": "resume-pdf-export",
+    "version": "1.0.0",
+    "description": "PDF export service for resume builder using Puppeteer on Vercel",
+    "main": "api/export.js",
+    "type": "module",
+    "scripts": {
+      "dev": "vercel dev",
+      "build": "echo 'No build step required'",
+      "start": "vercel dev"
+    },
+    "keywords": [
+      "pdf",
+      "resume",
+      "puppeteer",
+      "vercel",
+      "serverless"
+    ],
+    "author": "Your Name",
+    "license": "MIT",
+    "dependencies": {
+      "puppeteer-core": "^21.5.2",
+      "@sparticuz/chromium": "^119.0.2"
+    },
+    "engines": {
+      "node": ">=18.0.0"
+    },
+    "repository": {
+      "type": "git",
+      "url": "your-github-repo-url"
+    }
+  }
